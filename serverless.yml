@@ -1,0 +1,20 @@
+service: rustrocket
+provider:
+  name: aws
+plugins:
+  - serverless-rust
+package:
+  individually: true
+functions:
+  rustrocket:
+    handler: rustrocket
+    runtime: rust
+    events:
+      - http:
+          path: /
+          method: GET
+custom:
+  rust:
+    dockerless: true
+    target: aarch64-apple-darwin
+    linker: clang
