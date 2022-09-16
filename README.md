@@ -52,7 +52,7 @@ Boot a development server with the [`watch` subcommand](https://www.cargo-lambda
 cargo lambda watch
 ```
 
-Since the emulator server includes support for Lambda function URLs out of the box, you can open [localhost:9000/lambda-url/rustrocket](http://localhost:9000/lambda-url/rustrocket) to invoke your function and view it in your browser.
+Open [localhost:9000/lambda-url/rustrocket](http://localhost:9000/lambda-url/rustrocket) to invoke and view your function in the browser.
 
 ![hello from logrocket](https://user-images.githubusercontent.com/12433465/190524707-2ae17b2b-a5c2-4cf8-ae75-a1b8a52c7b15.png)
 
@@ -106,5 +106,5 @@ Send a request with the [`invoke` subcommand](https://www.cargo-lambda.info/comm
 cargo lambda invoke \
   --remote \
   --data-example apigw-request \
-  rustrocket
+  arn:aws:lambda:us-east-1:124397940292:function:rustrocket
 ```
